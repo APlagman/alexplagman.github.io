@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+  A Newfound Love for Jekyll &ndash; Alex Plagman
+</title>
+    <meta name="description" content="
+      
+      " />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    <link rel="stylesheet" href="https://aplagman.github.io/sass/main.css">
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="A Newfound Love for Jekyll"/>
+<meta name="twitter:description" content="When I first made my website back in 2016, I decided to build everything from the ground up.
+I wanted to fully understand what steps needed to be taken in order to build a responsive website."/>
+
+  </head>
+      
+  <body>
+    <header class="site-header" role="banner">
+      <div class="wrapper">
+        <a class="site-title" rel="author" href="https://aplagman.github.io">Alex Plagman</a>
+    
+        <nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+    
+          <div class="trigger">
+            
+              <a class="page-link" href="https://aplagman.github.io/about/">
+                  
+                  <span>About</span>
+              </a>
+            
+              <a class="page-link" href="https://aplagman.github.io/blog/">
+                  
+                  <span>Blog</span>
+              </a>
+            
+            <a class="page-link" onclick="let footer = document.body.getElementsByClassName('site-footer')[0]; footer.scrollIntoView({ behavior: 'smooth' });">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    
+  <main class="page-content">
+    <div class="wrapper">
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+          <h1 class="post-title p-name" itemprop="name headline">A Newfound Love for Jekyll</h1>
+          
+            <h2 class="post-subtitle">Making the Front-End Bearable</h2>
+          
+          <p class="post-meta">
+            <time class="dt-published" datetime="April 23, 2018" itemprop="datePublished">
+              April 23, 2018
+            </time>
+            
+          </p>
+        </header>
+
+        <div class="post-content e-content" itemprop="articleBody">
+          <p>When I first made my website back in 2016, I decided to build everything from the ground up.</p>
+
+<p>I wanted to fully understand what steps needed to be taken in order to build a responsive website.
+While I&rsquo;ve had some formal web design education, most of my web experience has been on ASP.NET and server-side logic.
+As a result, creating my own site provided a valuable opportunity to improve my understanding of HTML, CSS, and JavaScript.
+However, I didn&rsquo;t take the next step of employing modern web build processes or technologies.</p>
+
+<p>In the interest of putting something on my site, I decided I wanted to try making a blog.
+Now, for web developers who actually know what they&rsquo;re doing, this is super simple.
+Nowadays there are a multitude of ways to generate pages from templates such that new posts require little more than actually writing the new text.
+I unfortunately didn&rsquo;t have any idea how to use any of those technologies, and I (incorrectly) assumed that transitioning my site to incorporate one of them would be an enormous amount of work.
+In practice, this led to me manually copying and pasting markup as well as writing new posts in the HTML itself.
+In hindsight, this may have been the leading contributor to my general animosity toward web development and also the lack of content on my blog.</p>
+
+<p>This brings us to today. I had heard of <a href="https://jekyllrb.com">Jekyll</a> when I was designing my site two years ago, but I didn&rsquo;t have a deep enough understanding of the process in order to fully appreciate how powerful its processing was.
+Here&rsquo;s a few of the features that I think are fantastic:
+- Writing posts in Markdown is a breeze! Goodbye manually inserting <code>&amp;nbsp;</code> everywhere I needed a space next to a tag. Plus, you can embed HTML within your Markdown if absolutely necessary.
+- Jekyll allows for the creation of HTML templates (with parameters) that can be reused anywhere in your site.
+- Jekyll validates internal links, and won&rsquo;t even build your site if they&rsquo;re invalid.</p>
+
+<p>The key takeaway from using Jekyll is that it allows me to abstract away the hassle of writing markup from writing the page content itself.
+Pages can be modularized, allowing, for example, the navigation bar, footer, and central page content to be designed in pieces.
+Instead of copying the same markup to every page that needs it, you can create a layout and simply set up the relevant pages to use the layout with a single line.
+For instance, the only text in the file for this post other than the words you&rsquo;re reading is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+layout: post
+title:  <span style="color:#e6db74">&#34;A Newfound Love for Jekyll&#34;</span>
+subtitle: <span style="color:#e6db74">&#34;Making the Front-End Bearable&#34;</span>
+date:   <span style="color:#ae81ff">2018</span>-<span style="color:#ae81ff">4</span>-<span style="color:#ae81ff">23</span>
+---</code></pre></div>
+<p>Jekyll doesn&rsquo;t remove the need for writing HTML and CSS, but it vastly reduces the amount of work I have to do as the author of a static site. For that reason, I&rsquo;m a fan.</p>
+
+        </div>
+
+        <div>
+          
+          
+        </div>
+        <div>
+          
+          
+        </div>
+
+        <a class="u-url" href="https://aplagman.github.io/blog/posts/on-jekyll/" hidden></a>
+      </article>
+    </div>
+  </main>
+
+
+    
+      <footer class="site-footer">
+        <div class="wrapper">
+          <div class="footer-content">
+            <h2 class="footer-heading">Contact <wbr>Me</h2>
+            <div class="footer-main">
+              <div class="footer-col">
+                <ul>
+                  <li>
+                    Alex Plagman
+                  </li>
+                  <li>
+                    <address><a>alexplagman at gmail dot com</a></address>
+                  </li>
+                </ul>
+              </div>
+        
+              <div class="footer-col">
+                <ul>
+                  
+                    <li>
+                      <a href="https://github.com/aplagman/">
+                        <svg class="svg-icon">
+                          <use href="https://aplagman.github.io/img/icons.svg#github"></use>
+                        </svg>
+                        <span class="username">aplagman</span>
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a href="https://www.linkedin.com/in/alexplagman/">
+                        <svg class="svg-icon">
+                          <use href="https://aplagman.github.io/img/icons.svg#linkedin"></use>
+                        </svg>
+                        <span class="username">alexplagman</span>
+                      </a>
+                    </li>
+                  
+                </ul>
+              </div>
+        
+              <div class="footer-col info-col">
+                <p>Software engineer and hobbyist game developer.</p>
+                <p>Built with&nbsp;<a href="https://gohugo.io/">Hugo</a>. Find the site source code&nbsp;<a href="https://github.com/APlagman/AlexPlagman.com">here</a>.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex-center flex-col">
+            <a class="page-link copyright" onclick="let header = document.body.getElementsByClassName('site-header')[0]; header.scrollIntoView({ behavior: 'smooth' });">Back to top</a>
+            <span>© 2019 under the&nbsp;<a href="https://opensource.org/licenses/MIT">MIT license.</a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <script src="https://aplagman.github.io/js/entry.js"></script>
+    
+  </body>
+</html>
